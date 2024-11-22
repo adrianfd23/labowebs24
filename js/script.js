@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formContacto");
-    
-    form.addEventListener("submit", function(event) {
+
+    form.addEventListener("submit", function (event) {
         let valid = true;
 
         const nombre = document.getElementById("nombre");
@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Por favor, ingrese un correo electrónico válido.");
             valid = false;
         }
+
+        if (mensaje.value.trim().length < 10) {
+            alert("El mensaje debe tener al menos 10 caracteres.");
+            valid = false;
+        }
+
+
 
         if (!valid) {
             event.preventDefault();
