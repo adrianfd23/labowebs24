@@ -17,7 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Por favor, ingrese un correo electrónico válido.");
             valid = false;
         }
-
+        if (mensaje.value.trim() === "") {
+            alert("Por favor, ingrese un mensaje.");
+            valid = false;
+        }
+        
+        if (mensaje.value.trim().length < 10) {
+            alert("El mensaje debe tener al menos 10 caracteres.");
+            valid = false;
+        }
+        
         if (!valid) {
             event.preventDefault();
         }
