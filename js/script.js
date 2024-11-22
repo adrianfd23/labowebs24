@@ -17,14 +17,26 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Por favor, ingrese un correo electrónico válido.");
             valid = false;
         }
+<<<<<<< HEAD
 
+=======
+        if (mensaje.value.trim() === "") {
+            alert("Por favor, ingrese un mensaje.");
+            valid = false;
+        }
+        
+>>>>>>> hotfix-js
         if (mensaje.value.trim().length < 10) {
             alert("El mensaje debe tener al menos 10 caracteres.");
             valid = false;
         }
+<<<<<<< HEAD
 
 
 
+=======
+        
+>>>>>>> hotfix-js
         if (!valid) {
             event.preventDefault();
         }
